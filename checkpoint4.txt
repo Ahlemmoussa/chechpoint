@@ -1,0 +1,54 @@
+Q1
+class point3d():
+    def __init__(self,x,y,z):
+        self.x=x 
+        self.y=y 
+        self.z=z 
+    def tup(self):
+        return(self.x,self.y,self.z)
+mypoint= point3d(1,2,3)
+print(mypoint.tup())
+Q2
+class rectangle():
+    def __init__(self,l,w):
+        self.l = l 
+        self.w= w 
+    def perimeter(self):
+        return 2*(self.l+self.w)
+    def area(self):
+        return(self.l*self.w)
+myrectangle=rectangle(3,4)
+print(myrectangle.area(),myrectangle.perimeter())
+Q3
+from math import pi
+class cercle():
+    def __init__(self,r,x,y):
+        self.r= r
+        self.x=x 
+        self.y=y 
+    def area(self):
+        return(self.r**2*pi)
+    def perimeter(self):
+        return(2*pi*self.r)
+    def inside(self):
+        if (self.x//self.y<=self.r):
+            return print('le point appartient au cercle')
+        else:
+            return print('le point n appartient pas au cercle')
+mycercle=cercle(5,10,2)
+print(mycercle.area())
+print(mycercle.perimeter())
+mycercle.inside()
+Q4
+class bank():
+    def __init__(self,balance,x):
+        self.balance=balance
+        self.x= x 
+    def withdraw (self):
+        return(self.balance-self.x)
+    def deposit (self):
+        return (self.balance+self.x)
+mybank=bank(5000,200)
+print(mybank.withdraw())
+print(mybank.deposit())
+    
